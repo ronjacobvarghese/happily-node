@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const sessionSchema = new mongoose.Schema({
   student: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Student",
+    type: String,
   },
   dean: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Dean",
+    type: String,
+    required: true,
   },
+
   slotTime: {
     type: Date,
     required: true,
